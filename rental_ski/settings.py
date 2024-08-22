@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 #esto es para las variables de ambiente
+# para usar esto : 'pip install environ'
 import environ
 
 # Inicializar entorno
