@@ -12,3 +12,5 @@ class TipoUsuario(models.Model):
 class Usuario(AbstractUser):
 	id_tipo_user = models.ForeignKey('TipoUsuario',on_delete=models.CASCADE,null=True, default='cliente',blank=True)
     
+
+    
