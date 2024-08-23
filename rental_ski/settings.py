@@ -14,6 +14,7 @@ from pathlib import Path
 #esto es para las variables de ambiente
 # para usar esto : 'pip install environ'
 import environ
+from django.core.management.utils import get_random_secret_key
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,8 +31,8 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 
-SECRET_KEY = 'django-insecure-c)h%1!+@aybu6qk%v!c1z*@-sa@bz#n=dm315ur_dv1z7z^&nq'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!

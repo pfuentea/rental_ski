@@ -31,15 +31,20 @@
                         <a class="nav-link active" aria-current="page" href="{% url 'profile' %}">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <form action="{% url 'logout' %}" method="POST">
-                            {% csrf_token %}
-                            <button class="btn btn-danger">Logout</button>
-                        </form>
                         
                     </li>
+                   
                     {% endif %}
                 </ul>
+                <div class="d-flex align-items-center ms-auto">
+                    <span class="navbar-brand mb-0 h1">Bienvenido: {{user.username}}</span>
+                    <form action="{% url 'logout' %}" method="POST">
+                        {% csrf_token %}
+                        <button class="btn btn-danger">Logout</button>
+                    </form>
+                </div>
             </div>
+
         </div>
     </nav>
 
