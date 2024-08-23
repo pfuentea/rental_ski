@@ -24,3 +24,7 @@ class RegistroForm(UserCreationForm):
         # Hacer que el campo 'id_tipo_user' sea oculto con HiddenInput
         self.fields['id_tipo_user'].required = False
         self.fields['id_tipo_user'].widget = forms.HiddenInput()
+        self.fields['username'].help_text = None
+        self.fields['password1'].help_text = None
+        self.fields['password2'].help_text = None
+        self.fields['email'].help_text = None
