@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>ARRENDAR</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form action="" method="post"> 
+                {% csrf_token %}
+                <div class="card" style="width: 18rem;">
+                    
+                    <div class="card-body">
+                    <h5 class="card-title">{{ equipo.nombre }}</h5>
+                    <img src="{{equipo.imagen}}" class="card-img-top" alt="...">
+                    <p class="card-text">$ {{equipo.precio}}</p>
+                    <p><input type="date" name="fecha" id="fecha"></p>
+                    <p><button class="btn btn-success">Arrendar</button></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

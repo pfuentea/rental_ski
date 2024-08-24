@@ -6,6 +6,37 @@
 {% block content %}
 <div class="container">
     <h1>ACA VA EL CONTENIDO PRINCIPAL AL HACER LOGIN</h1>
+    <div class="row">
+        <div class="col-8 mx-auto">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>nombre</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for eq in equipos %}
+                    <tr>
+                        <td>{{eq.nombre}}</td>
+                        <td>{{eq.precio}}</td>
+                        <td>
+                            <a href="{% url 'arrendar' eq.id %}" class="btn btn-success">ARRENDAR</a>
+                        </td>
+                        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+       
+    
+
 </div>
+
 
 {% endblock %} 
